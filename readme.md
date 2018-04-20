@@ -2,7 +2,7 @@
 
 ![react-logo](./images/react-white-logo.png)
 
-## Learning Objectives
+## Learning Objectives - James
 
 * Explain what a frontend framework is and why they can be helpful in writing more complex applications.
 * Explain what ReactJS is and where it fits in our applications' stack.
@@ -11,7 +11,7 @@
 
 ## Framing
 
-### What is a Frontend Framework? (5 min / 10:05)
+### What is a Frontend Framework? (5 min / 10:05) - James
 
 - A framework is software providing generic functionality and structure that serves as foundation to build and deploy applications.
 - Express is a framework that runs on the server, receiving incoming request from the client, preforming some work that you have defined, and returning some response to the client.  Front-end frameworks run in the client's browser, receive input from interactions with the page, perform some work that you have defined, and make any updates necessary.
@@ -19,13 +19,17 @@
 - There are [many](https://stateofjs.com/2017/front-end/) front end frameworks and each go about solving problems of how state is managed, updated, and represented by a view but there are many commonalities.
 - There is a lot of debate over whether frontend frameworks count as frameworks at all -- some people say that they are just libraries and should be referred to as such.
 
-### What is ReactJS? (5 min / 10:10)
+### What is ReactJS? (5 min / 10:10) - Ali
 
 React is a JavaScript library used to craft modern day UI and views for the front-end in web applications.
 
 > **Selling Point:** By modeling small compatible components that focus on just rendering a view, we can move business logic out of the DOM, and therefore improve our app's performance, maintainability, modularity and readability.
 
-#### Some History
+#### React Dev Tools
+
+Please install the following Chrome extension: [React Dev Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en).
+
+#### Some History - Ali
 
 The first thing most people hear about React is "Facebook uses it."
 * First used by Facebook in 2011.
@@ -38,7 +42,7 @@ React was born out of Facebook's frustration with the traditional MVC model and 
 
 > If you want to get a taste of what React is all about, [here's an introduction from React.js Conf 2015](https://www.youtube.com/watch?v=KVZ-P-ZI6W4&feature=youtu.be&t=510). Recommend starting around the 8:35 mark and watching until 16:30.
 
-### React in MVC
+### React in MVC - Ali
 
 React can be thought of as the "Views" layer.
 
@@ -49,7 +53,7 @@ React will work with any back-end language, but for project 3 and in our in-clas
   The visual template the user sees, often populated with data from our models.
 </details>
 
-## Components (10 min / 10:20)
+## Components (10 min / 10:20) - James
 
 One comment made about React when it was first open sourced was "Rethinking established best practices" which kind of became the React motto.  In React, we want to move away from template pages, away from separating code based purely on file type, and more towards a **component-based** separation of concerns.  [Templates vs Components](https://wanderoak.co/fixed-templates-vs-components/)
 
@@ -115,7 +119,7 @@ Because the same input will always produce the same output, components are easil
 > If you're interested, [Jest](https://facebook.github.io/jest/docs/tutorial-react.html) is a popular testing library for React.
 
 
-## Exercise: Identifying Components (15 min / 10:35)
+## Exercise: Identifying Components (15 min / 10:35) - Ali
 
 > 10 minutes exercise. 5 minutes review.
 * Break into groups of three and take a look at Facebook, Craigslist, Ebay, or a website of your choice. Identify the visual "components" the website is comprised of. Use markers to draw these out on the wall.
@@ -125,7 +129,7 @@ As you're drawing this out, think about the following questions...
 * Are there any components that share the same structure?
 * Of these similar components, what is different about them?
 
-## Initial Setup (20 min / 10:55)
+## Initial Setup (20 min / 10:55) - James
 
 In order to create a new project and to get our development environment setup, we are going to use the Terminal command `create-react-app`. It will create a new folder in your current directory for the in-class application.
 
@@ -173,7 +177,7 @@ Take some time and look at what's been generated. Specifically look in `App.js` 
 ## Break: (10 min / 11:05)
 ---
 
-### We Do: Hello World - A Very Basic Component (10 min / 11:15)
+### We Do: Hello World - A Very Basic Component (10 min / 11:15) - Ali
 
 The basic unit you'll be working with in ReactJS is a **component**.
 
@@ -220,7 +224,7 @@ Every component has, at minimum, a render method. It generates a **Virtual DOM**
 ##### `export default Hello`
 This exposes the Hello class to other files which import from the App.js file. The `default` keyword means that any import that's name doesn't match a named export will automatically revert to this. Only one default is allowed per file.
 
-### JSX (5 min / 11:20)
+### JSX (5 min / 11:20) - James
 
 > Hey you got your html in my javascript!
 >
@@ -241,7 +245,7 @@ The JSX creates a heading with 'Hello World!'.
 > React can be written without JSX. If you want to learn more, [check out this blog post](http://jamesknelson.com/learn-raw-react-no-jsx-flux-es6-webpack/).  
 
 
-## Virtual DOM (5 min / 11:25)
+## Virtual DOM (5 min / 11:25) - Ali
 
 You may have noticed that our `src/index.js` code mentions ReactDOM. ReactDOM doesn't refer to the same DOM we know. Instead, it refers to a Virtual DOM. The Virtual DOM is a key piece of how React works.
 
@@ -279,7 +283,7 @@ ReactDOM.render(
 
 ---
 
-### Hello World: A Little Dynamic (15 min / 11:40)
+### Hello World: A Little Dynamic (15 min / 11:40) - James
 
 Our `Hello` component isn't too helpful. Let's make it more interesting.
 * Rather than simply display "Hello world", let's display a greeting to the user.
@@ -312,7 +316,7 @@ class Hello extends Component {
 
 In the above example, we replaced "world" with `{this.props.name}`.
 
-#### What are `.props`?
+#### What are `.props`? - Ali
 
 Properties! Every component has `.props`
 * Properties are immutable. That is, they cannot be changed while your program is running.
@@ -353,7 +357,7 @@ class Hello extends Component {
 
 ---
 
-## You Do: A Blog Post (25 min / 12:15)
+## You Do: A Blog Post (25 min / 12:15) - James
 > 20 min to work, 5 min review
 
 Let's have some practice creating a React component from scratch. How about a blog post?
@@ -371,7 +375,7 @@ If you finish early, try experimenting with CSS (Make Sure you use `className` i
 
 ---
 
-## Nested Components (10 minutes / 12:25)
+## Nested Components (10 minutes / 12:25) - Ali
 
 #### Q: What problems did you encounter when trying to add multiple comments to your Post?
 
@@ -456,7 +460,7 @@ class Post extends Component {
 
 ---
 
-## Closing (5 min / Rest of Class)
+## Closing (5 min / Rest of Class) - James
 
 * Why do we use components in React?
 * What is the Virtual DOM?
