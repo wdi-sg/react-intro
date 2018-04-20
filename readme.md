@@ -35,6 +35,7 @@ The first thing most people hear about React is "Facebook uses it."
 * First used by Facebook in 2011.
 * Then Instagram in 2012.
 * Went open source in May 2013.
+* Changed licence to MIT in 2017.
 
 React was born out of Facebook's frustration with the traditional MVC model and how..
   * Re-rendering something meant re-rendering everything (or just a lot).
